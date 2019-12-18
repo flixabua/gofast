@@ -1,0 +1,39 @@
+Plicht:
+	boostring A/J
+	teleporter A/J
+
+	slowmo für menu? F
+	highscore (time + verkack) F
+
+	dimensionsshift J
+		zu holo
+		layers
+
+	Level fade in A
+		move
+		shape key
+
+Optional:
+	minimap
+	bewegt laser A
+	turret J
+
+Cancalled:
+	shadow X
+	KI? 
+		keine läufer X
+		creeper? X	
+
+
+
+branching levels
+
+shadergraph
+
+//TODO: wallrunnign, dont need to press w
+
+Influences:
+	0R8
+	futuristic shooter
+	superhot
+	mirrors edge
