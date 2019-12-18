@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15068d6414080da4c907705f06bfbe15, type: 3}
   m_Name: standartPlayerValues
   m_EditorClassIdentifier: 
-  maxSpeed: 10
+  maxSpeed: 100
+  maxAccelarationSpeed: 10
   accelarationForce: 60
   myDrag: 0.8
   jumpForce: 400
@@ -26,14 +27,14 @@ MonoBehaviour:
   wallRunWallAttraction: 0.5
   wallRunDetectionDistance: 1.55
   wallMinVelocity: 2
-  wallRunJumpNormalForce: 500
+  wallRunJumpNormalForce: 250
   wallRunJumpTangentForce: 200
-  wallRunJumpForwardForce: 600
-  wallRunJumpVerticalForce: 400
+  wallRunJumpForwardForce: 300
+  wallRunJumpVerticalForce: 200
   wallTurnDetectionDistance: 2
   wallTurnVerticalForce: 500
   wallTurnNormalForce: 300
   wallTurnMinVerticalSpeed: -5
   turnSpeed: 500
-  pullUpVercticalForce: 500
+  pullUpVercticalForce: 250
   pullUpForwardForce: 50

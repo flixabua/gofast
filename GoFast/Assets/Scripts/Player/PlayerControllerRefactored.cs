@@ -55,7 +55,8 @@ public class PlayerControllerRefactored : myReset
 
     //general variables
     /*[SerializeField]*/
-    private float maxSpeed = 10f;
+    private float maxSpeed = 100f;
+    private float maxAccelarationSpeed = 10f;
     /*[SerializeField]*/
     private float accelarationForce = 60f;
     [Range(0, 1)] /*[SerializeField]*/ private float myDrag = 0.8f;
@@ -226,7 +227,9 @@ public class PlayerControllerRefactored : myReset
         //Debug.Log(currentState.ToString());
 
         //basic values well need later
-        Vector3 movementForce = (transform.forward * vert + transform.right * horiz).normalized * accelarationForce;
+        Vector3 movementForce = new Vector3();
+        if(rigid.velocity.magnitude <= maxAccelarationSpeed)
+            movementForce= (transform.forward * vert + transform.right * horiz).normalized * accelarationForce;
         Vector3 forceForJump = new Vector3();
 
         Vector3 cameraRotation = camera.transform.rotation.eulerAngles;
@@ -459,9 +462,9 @@ public class PlayerControllerRefactored : myReset
         //do animatons
         animator.SetInteger("state", (int)currentState);
         //isRightRun is done above
-        animator.SetFloat("speed", rigid.velocity.magnitude / maxSpeed);
-        animator.SetFloat("side", Vector3.Project(rigid.velocity, transform.right).magnitude / maxSpeed);
-        animator.SetFloat("front", Vector3.Project(rigid.velocity, transform.forward).magnitude / maxSpeed);
+        animator.SetFloat("speed", rigid.velocity.magnitude / maxAccelarationSpeed);
+        animator.SetFloat("side", Vector3.Project(rigid.velocity, transform.right).magnitude / maxAccelarationSpeed);
+        animator.SetFloat("front", Vector3.Project(rigid.velocity, transform.forward).magnitude / maxAccelarationSpeed);
 
         tryingToJump = false;//checking in update for better responsiveness
         //tryingToSlide = false;
@@ -564,6 +567,7 @@ public class PlayerControllerRefactored : myReset
     {
         //general variables
         maxSpeed = playerData.maxSpeed;
+        maxAccelarationSpeed = playerData.maxAccelarationSpeed;
         accelarationForce = playerData.accelarationForce;
         myDrag = playerData.myDrag;
 

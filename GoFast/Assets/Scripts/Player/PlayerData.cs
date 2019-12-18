@@ -17,8 +17,10 @@ using UnityEngine;
 public class PlayerData : ScriptableObject
 {
     //general variables
-     public float maxSpeed = 10f;
-     public float accelarationForce = 60f;
+    public float maxSpeed = 10f;
+    public float maxAccelarationSpeed = 10f;
+
+    public float accelarationForce = 60f;
     [Range(0, 1)]  public float myDrag = 0.8f;
 
 
