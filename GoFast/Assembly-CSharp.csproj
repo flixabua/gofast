@@ -68,6 +68,7 @@
     <Compile Include="Assets\Scripts\Interaction\ButtonObject.cs" />
     <Compile Include="Assets\Scripts\Interaction\Interactable.cs" />
     <Compile Include="Assets\Scripts\Interaction\Interactor.cs" />
+    <Compile Include="Assets\Scripts\Level\BoostRing.cs" />
     <Compile Include="Assets\Scripts\Level\myReset.cs" />
     <Compile Include="Assets\Scripts\Level\Path.cs" />
     <Compile Include="Assets\Scripts\Level\Point.cs" />

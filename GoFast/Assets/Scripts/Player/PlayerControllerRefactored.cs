@@ -432,7 +432,7 @@ public class PlayerControllerRefactored : myReset
         }
 
         //applyDrag when not accelartaing
-        if (movementForce.magnitude == 0 && currentState != state.wallRunning)
+        if (movementForce.magnitude == 0 && currentState != state.wallRunning && isGrounded)
         {
             Vector2 velocity = new Vector2(rigid.velocity.x, rigid.velocity.z);//ignore vertical aspect
             velocity *= myDrag;
