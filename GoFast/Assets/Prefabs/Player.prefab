@@ -254,7 +254,7 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4476443780702220926}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 4a3e9e17d6721d04990f8cc20364e36d, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5
@@ -301,7 +301,7 @@ Animator:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4476443780702220926}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 6b41f252546dc2e4a9c6d5963399faa3, type: 3}
+  m_Avatar: {fileID: 9000000, guid: 910fc0036142e8f4a9265639dbd6e27e, type: 3}
   m_Controller: {fileID: 9100000, guid: d9b62e142228b2a42979bf4314a3697e, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
@@ -394,11 +394,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -6057140222963153312, guid: 910fc0036142e8f4a9265639dbd6e27e,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 2c6f54e935d368041a0e74d2fe39e87d, type: 2}
     - target: {fileID: 2794456488696647507, guid: 910fc0036142e8f4a9265639dbd6e27e,
         type: 3}
       propertyPath: m_LocalPosition.y
@@ -414,7 +409,8 @@ PrefabInstance:
       propertyPath: m_CastShadows
       value: 2
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -6057140222963153312, guid: 910fc0036142e8f4a9265639dbd6e27e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 910fc0036142e8f4a9265639dbd6e27e, type: 3}
 --- !u!4 &4597274629596402550 stripped
 Transform:
