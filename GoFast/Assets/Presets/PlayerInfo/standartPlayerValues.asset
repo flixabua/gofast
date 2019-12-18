@@ -23,9 +23,9 @@ MonoBehaviour:
   wallMultiplier: 0.6
   wallRunCameraTilt: 20
   wallRunCameraTiltSpeed: 0.15
-  wallRunWallAttraction: 5
+  wallRunWallAttraction: 1
   wallRunDetectionDistance: 1.55
-  wallMinVelocity: 4
+  wallMinVelocity: 2
   wallRunJumpNormalForce: 500
   wallRunJumpTangentForce: 200
   wallRunJumpForwardForce: 600
