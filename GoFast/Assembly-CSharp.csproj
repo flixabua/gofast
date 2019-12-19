@@ -66,6 +66,9 @@
     <Compile Include="Assets\Scripts\Experimental\Interceptor.cs" />
     <Compile Include="Assets\Scripts\Interaction\Button.cs" />
     <Compile Include="Assets\Scripts\Interaction\ButtonObject.cs" />
+    <Compile Include="Assets\Scripts\Interaction\Dimension.cs" />
+    <Compile Include="Assets\Scripts\Interaction\DSwitchable.cs" />
+    <Compile Include="Assets\Scripts\Interaction\DSwitcher.cs" />
     <Compile Include="Assets\Scripts\Interaction\Interactable.cs" />
     <Compile Include="Assets\Scripts\Interaction\Interactor.cs" />
     <Compile Include="Assets\Scripts\Level\BoostRing.cs" />

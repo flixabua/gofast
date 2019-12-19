@@ -13,6 +13,7 @@ using UnityEngine;
 
 [RequireComponent(typeof(Animator))]
 [RequireComponent(typeof(Interactor))]
+[RequireComponent(typeof(DSwitcher))]
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerControllerRefactored : myReset
 {
@@ -49,8 +50,10 @@ public class PlayerControllerRefactored : myReset
     private string quit = "return";
 
     private string interact = "Interact";
+    private string switchButton = "Switch";
 
     private Interactor interactor;
+    private DSwitcher switcher;
 
 
     //general variables
@@ -162,6 +165,7 @@ public class PlayerControllerRefactored : myReset
         animator.enabled = true;
 
         interactor = GetComponent<Interactor>();
+        switcher = GetComponent<DSwitcher>();
 
         if (playerData == null) Debug.LogWarning("assign playerdata to player in inspetor please");
         else StartCoroutine(loadPlayerData());
@@ -211,13 +215,13 @@ public class PlayerControllerRefactored : myReset
     {
         getInput();
 
-        //Raycasts, so we know our soroundings
-        rightWallRun = Physics.Raycast(new Ray(transform.position, transform.right), out rightHit, wallRunDetectionDistance);
-        leftWallRun = Physics.Raycast(new Ray(transform.position, -transform.right), out leftHit, wallRunDetectionDistance);
+        //Raycasts, so we know our soroundings (ignoring pass through layer)
+        rightWallRun = Physics.Raycast(new Ray(transform.position, transform.right), out rightHit, wallRunDetectionDistance, 9);
+        leftWallRun = Physics.Raycast(new Ray(transform.position, -transform.right), out leftHit, wallRunDetectionDistance, 9);
 
-        infrontOfThing = Physics.Raycast(new Ray(transform.position, transform.forward), wallTurnDetectionDistance);
-        infrontOfThingLow = Physics.Raycast(new Ray(transform.position + new Vector3(0, -transform.localScale.y, 0), transform.forward), wallTurnDetectionDistance);
-        infrontOfThingHigh = Physics.Raycast(new Ray(transform.position + new Vector3(0, +transform.localScale.y, 0), transform.forward), wallTurnDetectionDistance);
+        infrontOfThing = Physics.Raycast(new Ray(transform.position, transform.forward), wallTurnDetectionDistance, 9);
+        infrontOfThingLow = Physics.Raycast(new Ray(transform.position + new Vector3(0, -transform.localScale.y, 0), transform.forward), wallTurnDetectionDistance, 9);
+        infrontOfThingHigh = Physics.Raycast(new Ray(transform.position + new Vector3(0, +transform.localScale.y, 0), transform.forward), wallTurnDetectionDistance, 9);
 
     }
 
@@ -640,6 +644,9 @@ public class PlayerControllerRefactored : myReset
 
         interact = inputData.interact;
         interactor.button = interact;
+
+        switchButton = inputData.switchButton;
+        switcher.button = switchButton;
 
         yield return null;
     }

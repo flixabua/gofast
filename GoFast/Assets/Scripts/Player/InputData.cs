@@ -35,5 +35,6 @@ public class InputData : ScriptableObject
     public string quit = "return";
 
     public string interact = "Interact";
+    public string switchButton = "Switch";
 }
 

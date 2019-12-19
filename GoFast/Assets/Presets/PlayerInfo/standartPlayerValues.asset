@@ -30,10 +30,10 @@ MonoBehaviour:
   wallRunJumpNormalForce: 250
   wallRunJumpTangentForce: 200
   wallRunJumpForwardForce: 300
-  wallRunJumpVerticalForce: 200
+  wallRunJumpVerticalForce: 400
   wallTurnDetectionDistance: 2
   wallTurnVerticalForce: 500
-  wallTurnNormalForce: 300
+  wallTurnNormalForce: 250
   wallTurnMinVerticalSpeed: -5
   turnSpeed: 500
   pullUpVercticalForce: 250
