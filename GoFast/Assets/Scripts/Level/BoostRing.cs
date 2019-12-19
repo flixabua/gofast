@@ -13,6 +13,9 @@ public class BoostRing : MonoBehaviour
 {
     [SerializeField] private float force = 10000f;
     [SerializeField] private float additionalVerticalForce = 300f;
+
+    [SerializeField] private float fovForceMultiplier = 1;
+    [SerializeField] private float fovTimeMultiplier = 1;
     //maybe add min entry velocity or set speed instead of add force
 
     private void OnTriggerEnter(Collider other)
@@ -24,6 +27,9 @@ public class BoostRing : MonoBehaviour
         {
             Vector3 direction = Vector3.Project(rigid.velocity, transform.forward).normalized;//go forwars or backwards?
             rigid.AddForce(direction * force + Vector3.up *  additionalVerticalForce);
+
+            PlayerControllerRefactored player = other.GetComponent<PlayerControllerRefactored>();
+            if (player != null) CameraEffectsMaster.fovPunch((force + additionalVerticalForce) / 2000 * fovForceMultiplier, (force + additionalVerticalForce) / 20000 * fovTimeMultiplier);
         }
     }
 

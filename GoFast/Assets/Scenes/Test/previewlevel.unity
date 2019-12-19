@@ -1016,6 +1016,9 @@ Transform:
   - {fileID: 966195790}
   - {fileID: 1695960925}
   - {fileID: 508034390}
+  - {fileID: 1863876284}
+  - {fileID: 487269935}
+  - {fileID: 1868642510}
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2264,7 +2267,7 @@ GameObject:
   - component: {fileID: 487269932}
   - component: {fileID: 487269931}
   m_Layer: 0
-  m_Name: Cube (1)
+  m_Name: dimensionTest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2304,7 +2307,7 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 487269930}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
@@ -2349,13 +2352,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 487269930}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.3, y: -16.77, z: 20.77}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -16.466677, y: 120.67627, z: -358.49222}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 394892483}
-  m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_Father: {fileID: 211520357}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &492445560
 PrefabInstance:
@@ -6671,19 +6674,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 16885932, guid: 2a05d36a94b7f3e46834b4acf322d11d, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: d9b62e142228b2a42979bf4314a3697e, type: 2}
-    - target: {fileID: 16885932, guid: 2a05d36a94b7f3e46834b4acf322d11d, type: 3}
-      propertyPath: m_Avatar
-      value: 
-      objectReference: {fileID: 9000000, guid: 910fc0036142e8f4a9265639dbd6e27e, type: 3}
-    - target: {fileID: 5856596147926662668, guid: 2a05d36a94b7f3e46834b4acf322d11d,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2a05d36a94b7f3e46834b4acf322d11d, type: 3}
 --- !u!4 &1407041947 stripped
@@ -6692,29 +6682,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1407041946}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1407041948 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4476443780702220926, guid: 2a05d36a94b7f3e46834b4acf322d11d,
-    type: 3}
-  m_PrefabInstance: {fileID: 1407041946}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1407041949
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1407041948}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b2ada57933615b40ac2b4306db0d06c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dimensions:
-  - {fileID: 11400000, guid: eb39f7f3cc5ab09468ecd6d627a79ee7, type: 2}
-  - {fileID: 11400000, guid: 6b89aae922a3a3347aaf5c69a712f1b1, type: 2}
-  - {fileID: 11400000, guid: 66741bda996e24848a72153d38a52818, type: 2}
-  button: Switch
 --- !u!1001 &1407727262
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9017,7 +8984,7 @@ GameObject:
   - component: {fileID: 1863876281}
   - component: {fileID: 1863876280}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: dimensionTest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9102,13 +9069,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1863876279}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.39, y: -16.77, z: 20.77}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -24.556679, y: 120.67627, z: -358.49222}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1168269231}
-  m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_Father: {fileID: 211520357}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1867351655
 PrefabInstance:
@@ -9214,7 +9181,7 @@ GameObject:
   - component: {fileID: 1868642507}
   - component: {fileID: 1868642506}
   m_Layer: 0
-  m_Name: Cube (2)
+  m_Name: dimensionTest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9299,13 +9266,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1868642505}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.37, y: -16.77, z: 20.77}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -8.796678, y: 120.67627, z: -358.49222}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1894436897}
-  m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_Father: {fileID: 211520357}
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1881294260
 GameObject:
@@ -9468,7 +9435,7 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1894436896}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
@@ -11048,16 +11015,6 @@ PrefabInstance:
       propertyPath: path
       value: 
       objectReference: {fileID: 237726509}
-    - target: {fileID: 151639635914013098, guid: b58730364aaeedc488ee3c9194759c95,
-        type: 3}
-      propertyPath: m_Intensity
-      value: 13.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 151639635914013098, guid: b58730364aaeedc488ee3c9194759c95,
-        type: 3}
-      propertyPath: m_Shadows.m_Type
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b58730364aaeedc488ee3c9194759c95, type: 3}
 --- !u!4 &5006512735638681718 stripped

@@ -12,6 +12,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(CameraEffects))]
 public class FollowCamera : MonoBehaviour
 {
     [SerializeField] private Transform target;

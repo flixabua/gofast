@@ -16,6 +16,8 @@ public class DSwitcher : MonoBehaviour
 
     //Currently does not get reset when respwning. should it?
 
+    //TODO: change colorgrading depending on dimension
+
     private List<DSwitchable> switchables = new List<DSwitchable>();
     public  Dimension[] dimensions = new Dimension[0];//TODO: make sure they are in the right places
     int currentDimension = 0;
@@ -62,6 +64,9 @@ public class DSwitcher : MonoBehaviour
     public void switchDimension(int dimension)//TODO: enable / disable certain dimensions without affecting the others
     {
         Debug.Log("Switching to " + dimension);
+
+        CameraEffectsMaster.fovPunch(5, 0.5f);
+
         if (dimension >= 0 && dimension  < dimensions.Length)
         {
             foreach (DSwitchable switchO in switchables)

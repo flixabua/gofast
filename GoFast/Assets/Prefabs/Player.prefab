@@ -76,6 +76,7 @@ GameObject:
   - component: {fileID: 4476443780384884659}
   - component: {fileID: 4476443780384884660}
   - component: {fileID: 4476443780384884656}
+  - component: {fileID: 29200186}
   m_Layer: 8
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -209,6 +210,18 @@ MonoBehaviour:
   m_BeforeTransparentBundles: []
   m_BeforeStackBundles: []
   m_AfterStackBundles: []
+--- !u!114 &29200186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4476443780384884661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27ce883462f65bf4b98cbca4007a7041, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4476443780702220926
 GameObject:
   m_ObjectHideFlags: 0
@@ -223,6 +236,8 @@ GameObject:
   - component: {fileID: 16885938}
   - component: {fileID: 16885932}
   - component: {fileID: 664520721}
+  - component: {fileID: 1407041949}
+  - component: {fileID: 1407041950}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -327,6 +342,68 @@ MonoBehaviour:
   maxAngle: 25
   maxDistance: 5
   button: Interact
+--- !u!114 &1407041949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4476443780702220926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b2ada57933615b40ac2b4306db0d06c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dimensions:
+  - {fileID: 11400000, guid: eb39f7f3cc5ab09468ecd6d627a79ee7, type: 2}
+  - {fileID: 11400000, guid: 6b89aae922a3a3347aaf5c69a712f1b1, type: 2}
+  - {fileID: 11400000, guid: 66741bda996e24848a72153d38a52818, type: 2}
+  button: Switch
+--- !u!114 &1407041950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4476443780702220926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b6f0e3224a51794a8c13981f1b928b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fovPunchCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 2.9833546
+      outSlope: 2.9833546
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.33372927
+      value: 0.99563277
+      inSlope: -0.37620768
+      outSlope: -0.37620768
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.46692842
+      outWeight: 0.058586217
+    - serializedVersion: 3
+      time: 1.0029297
+      value: 0.0019798279
+      inSlope: 0.17061087
+      outSlope: 0.17061087
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.27450842
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &8842387021140588652
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -409,8 +486,7 @@ PrefabInstance:
       propertyPath: m_CastShadows
       value: 2
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: -6057140222963153312, guid: 910fc0036142e8f4a9265639dbd6e27e, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 910fc0036142e8f4a9265639dbd6e27e, type: 3}
 --- !u!4 &4597274629596402550 stripped
 Transform:

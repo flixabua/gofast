@@ -15,6 +15,7 @@ using UnityEngine;
 [RequireComponent(typeof(Interactor))]
 [RequireComponent(typeof(DSwitcher))]
 [RequireComponent(typeof(Rigidbody))]
+[RequireComponent(typeof(CameraEffectsMaster))]
 public class PlayerControllerRefactored : myReset
 {
     public enum state { walking, jumping, falling, wallRunning, wallJumping, wallTurning, pullUp, sliding, skipping };
