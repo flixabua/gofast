@@ -13,24 +13,26 @@ using UnityEngine;
 public class CameraEffects : MonoBehaviour
 {
     private Camera cam;
+    private float standartFov = 60;
 
     void Start()
     {
         cam = GetComponentInChildren<Camera>();
         if (cam == null) Debug.LogError(name + " could not find a camera");
+        standartFov = cam.fieldOfView;
     }
 
     public IEnumerator fovPunch(float strength, float duration, AnimationCurve curve)
-    {
-        float fov = cam.fieldOfView;
-        for (float i = 0; i < duration; i += Time.deltaTime)
+    {   
+        for (float i = 0; i <= duration; i += Time.deltaTime)
         {
-
-            cam.fieldOfView = fov + strength * curve.Evaluate(i / duration);
+            float currentChange = strength * (curve.Evaluate(i / duration));
+            cam.fieldOfView = standartFov + currentChange;
+            
             yield return new WaitForEndOfFrame();
         }
+        cam.fieldOfView = standartFov;
 
-        cam.fieldOfView = fov;
         yield return null;
     }
 }

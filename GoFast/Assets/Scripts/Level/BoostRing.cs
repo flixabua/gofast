@@ -26,6 +26,7 @@ public class BoostRing : MonoBehaviour
         if (rigid != null)
         {
             Vector3 direction = Vector3.Project(rigid.velocity, transform.forward).normalized;//go forwars or backwards?
+            if (direction.magnitude == 0) direction = transform.forward;
             rigid.AddForce(direction * force + Vector3.up *  additionalVerticalForce);
 
             PlayerControllerRefactored player = other.GetComponent<PlayerControllerRefactored>();

@@ -20,6 +20,7 @@ public class DSwitcher : MonoBehaviour
 
     private List<DSwitchable> switchables = new List<DSwitchable>();
     public  Dimension[] dimensions = new Dimension[0];//TODO: make sure they are in the right places
+    public int[] dimensionVolumeIndex = new int[0];
     int currentDimension = 0;
 
     public string button = "Switch";
@@ -39,6 +40,12 @@ public class DSwitcher : MonoBehaviour
         switchables = GameObject.FindObjectsOfType<DSwitchable>().ToList<DSwitchable>();
 
         if (dimensions.Length == 0) Debug.LogError("There are no dimensions to shift to");
+
+        dimensionVolumeIndex = new int[dimensions.Length];
+        for (int i = 0; i < dimensionVolumeIndex.Length; i++)
+        {
+            dimensionVolumeIndex[i] = CameraEffectsMaster.addVolume(dimensions[i].postProcessingVolume);
+        }
 
         switchDimension(0);
     }
@@ -63,9 +70,15 @@ public class DSwitcher : MonoBehaviour
 
     public void switchDimension(int dimension)//TODO: enable / disable certain dimensions without affecting the others
     {
-        Debug.Log("Switching to " + dimension);
+        //Debug.Log("Switching to " + dimension);
 
-        CameraEffectsMaster.fovPunch(5, 0.5f);
+        CameraEffectsMaster.fovPunch(5, 0.25f);
+        //CameraEffectsMaster.changeColor(dimensions[dimension].viewTint);
+        for (int i = 0; i < dimensions.Length; i++)//TODO: save the indices individually, because they will not be indentical!
+        {
+            if (i == dimension) CameraEffectsMaster.setVolumeweight(dimensionVolumeIndex[i], 1);
+            else CameraEffectsMaster.setVolumeweight(dimensionVolumeIndex[i], 0);
+        }
 
         if (dimension >= 0 && dimension  < dimensions.Length)
         {

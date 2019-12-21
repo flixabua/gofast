@@ -122,7 +122,7 @@ MonoBehaviour:
     overrideState: 1
     value: 1
   dirtTexture:
-    overrideState: 1
+    overrideState: 0
     value: {fileID: 0}
     defaultState: 1
   dirtIntensity:
@@ -204,7 +204,7 @@ MonoBehaviour:
     value: 100
   colorFilter:
     overrideState: 0
-    value: {r: 1, g: 1, b: 1, a: 1}
+    value: {r: 0.74209034, g: 1, b: 0, a: 1}
   hueShift:
     overrideState: 0
     value: 73

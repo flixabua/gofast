@@ -14,3 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mat: {fileID: 2100000, guid: f351506af2c15994eb8d14751e446be7, type: 2}
   index: 1
+  postProcessingVolume: {fileID: 11400000, guid: 0cef1c5f389178040a9eba8d3ed3b118,
+    type: 2}
