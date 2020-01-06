@@ -33,6 +33,7 @@ public class InputData : ScriptableObject
 
     public string reset = "backspace";
     public string quit = "return";
+    public string cancel = "Cancel";
 
     public string interact = "Interact";
     public string switchButton = "Switch";
