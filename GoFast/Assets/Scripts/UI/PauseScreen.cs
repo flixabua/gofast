@@ -41,6 +41,7 @@ public class PauseScreen : MonoBehaviour
     public void changeSlider(float newValue)
     {
         //Add mouse sensibility change here
-        float mousesensibility = newValue;
+        // float mousesensibility = newValue;
+        GameObject.FindObjectOfType<PlayerControllerRefactored>().mouseSpeed = newValue;
     }
 }

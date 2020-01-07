@@ -10,7 +10,7 @@ public class MainMenuManager : MonoBehaviour
 
     private void Start()
     {
-        if(PlayerPrefs.GetInt("Score", 0) == 0)
+        if(PlayerPrefs.GetInt("Score", 0) == 0 && button2 != null && button3 != null)
         {
             button2.interactable = false;
             button3.interactable = false;
