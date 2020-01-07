@@ -101,15 +101,30 @@ public class CameraEffectsMaster : MonoBehaviour
 
     public void reload()
     {
-        if (instance == null) instance = this;
-        else Destroy(this);
+
+        //not a "real" singleton, because plans change and player doesnt want its master to die
+
+        /*if (instance == null)*/
+        instance = this;
+        //else Destroy(this);
+        
+ 
+        CameraEffectsMaster[] masters = GameObject.FindObjectsOfType<CameraEffectsMaster>();
+        if (masters.Length > 1)
+        {
+            Debug.LogWarning("There are multiple cameraEffectsMasters, disabled all, but " + name);
+            for(int i = 0; i < masters.Length; i++)
+            {
+                if (masters[i] != this) masters[i].enabled = false;
+            }
+        }
 
         cameraEffects = GameObject.FindObjectsOfType<CameraEffects>();
 
-       
+        //outdated
+        /*
         if (this == instance)
         {
-           /* 
             GameObject gObject = new GameObject("dimensionPostprocessVolume");
             gObject.transform.parent = transform;
             gObject.layer = 8;//post processing
@@ -118,7 +133,7 @@ public class CameraEffectsMaster : MonoBehaviour
             ppVolume.isGlobal = true;
             ppVolume.priority = 2;
             ppVolume.weight = 1;
-            */
         }
+        */
     }
 }
