@@ -62,9 +62,9 @@ public class SpecialPlatform : ButtonObject
                     if(!end)
                     {
                         //dont overshoot
-                        if (Vector3.Distance(transform.position, path.positions[pathIndex]) > moveSpeed * Time.deltaTime)
+                        if (Vector3.Distance(transform.position, path.positions[pathIndex]) > moveSpeed * Time.timeScale * Time.deltaTime)
                         {
-                            transform.Translate((path.positions[pathIndex] - transform.position).normalized * moveSpeed * Time.deltaTime);
+                            transform.Translate((path.positions[pathIndex] - transform.position).normalized * moveSpeed * Time.timeScale * Time.deltaTime);
                         }
                         else
                         {
@@ -87,13 +87,13 @@ public class SpecialPlatform : ButtonObject
 
             case type.circle://circle around center point
                 //set pos according to standart algebra circle stuff
-                float x = Mathf.Cos(Time.time * moveSpeed / 6) * radius + center.x;
-                float z = Mathf.Sin(Time.time * moveSpeed / 6) * radius + center.z;
+                float x = Mathf.Cos(Time.time * moveSpeed * Time.timeScale / 6) * radius + center.x;
+                float z = Mathf.Sin(Time.time * moveSpeed * Time.timeScale / 6) * radius + center.z;
                 transform.position = new Vector3(x, center.y, z);
                 break;
 
             case type.rotate://rotate along own axis
-                transform.Rotate(rotation * Time.deltaTime);
+                transform.Rotate(rotation * Time.deltaTime * Time.timeScale);
                 break;
         }
     }
