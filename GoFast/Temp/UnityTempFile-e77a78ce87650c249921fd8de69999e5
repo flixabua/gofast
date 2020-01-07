@@ -316,6 +316,7 @@ Assets\Scripts\Level\TileGenerator.cs
 Assets\Scripts\Player\CameraEffects.cs
 Assets\Scripts\Player\CameraEffectsMaster.cs
 Assets\Scripts\Player\Drone.cs
+Assets\Scripts\Player\Effect.cs
 Assets\Scripts\Player\FollowCamera.cs
 Assets\Scripts\Player\InputData.cs
 Assets\Scripts\Player\PlayerController.cs

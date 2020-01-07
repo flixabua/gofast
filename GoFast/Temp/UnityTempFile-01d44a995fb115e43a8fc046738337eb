@@ -1,15 +1,11 @@
 /target:library
 /nowarn:0169
-/out:Temp/Unity.CollabProxy.Editor.dll
+/out:Temp/Assembly-CSharp.dll
 /debug:portable
 /optimize-
 /nostdlib+
 /preferreduilang:en-US
 /langversion:latest
-/reference:Library/ScriptAssemblies/UnityEditor.UI.dll
-/reference:Library/ScriptAssemblies/UnityEngine.UI.dll
-/reference:Library/ScriptAssemblies/UnityEditor.TestRunner.dll
-/reference:Library/ScriptAssemblies/UnityEngine.TestRunner.dll
 /reference:"D:/Program Files/Unity/Hub/Editor/2018.3.14f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll"
 /reference:"D:/Program Files/Unity/Hub/Editor/2018.3.14f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll"
 /reference:"D:/Program Files/Unity/Hub/Editor/2018.3.14f1/Editor/Data/Managed/UnityEngine/UnityEngine.ARModule.dll"
@@ -71,11 +67,24 @@
 /reference:"D:/Program Files/Unity/Hub/Editor/2018.3.14f1/Editor/Data/Managed/UnityEngine/UnityEngine.WindModule.dll"
 /reference:"D:/Program Files/Unity/Hub/Editor/2018.3.14f1/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll"
 /reference:"D:/Program Files/Unity/Hub/Editor/2018.3.14f1/Editor/Data/Managed/UnityEditor.dll"
-/reference:"D:/Program Files/Unity/Hub/Editor/2018.3.14f1/Editor/Data/UnityExtensions/Unity/UnityVR/Editor/UnityEditor.VR.dll"
-/reference:"D:/Program Files/Unity/Hub/Editor/2018.3.14f1/Editor/Data/Managed/UnityEditor.Graphs.dll"
-/reference:"D:/Program Files/Unity/Hub/Editor/2018.3.14f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll"
-/reference:"C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/15.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll"
-/reference:D:/Users/ijona/Documents/GitHub/gofast/GoFast/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll
+/reference:Library/ScriptAssemblies/Unity.Timeline.Editor.dll
+/reference:Library/ScriptAssemblies/Unity.VSCode.Editor.dll
+/reference:Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.dll
+/reference:Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.dll
+/reference:Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll
+/reference:Library/ScriptAssemblies/Unity.RenderPipelines.Lightweight.Runtime.dll
+/reference:Library/ScriptAssemblies/Unity.RenderPipelines.Lightweight.Editor.dll
+/reference:Library/ScriptAssemblies/UnityEngine.UI.dll
+/reference:Library/ScriptAssemblies/Unity.Timeline.dll
+/reference:Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll
+/reference:Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll
+/reference:Library/ScriptAssemblies/Unity.Rider.Editor.dll
+/reference:Library/ScriptAssemblies/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll
+/reference:Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll
+/reference:Library/ScriptAssemblies/Unity.ShaderGraph.Editor.dll
+/reference:Library/ScriptAssemblies/Unity.RenderPipelines.Core.ShaderLibrary.dll
+/reference:Library/ScriptAssemblies/Unity.TextMeshPro.dll
+/reference:Library/ScriptAssemblies/UnityEditor.UI.dll
 /reference:"D:/Program Files/Unity/Hub/Editor/2018.3.14f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll"
 /reference:"D:/Program Files/Unity/Hub/Editor/2018.3.14f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/System.dll"
 /reference:"D:/Program Files/Unity/Hub/Editor/2018.3.14f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/System.Core.dll"
@@ -266,7 +275,7 @@
 /define:ENABLE_AR
 /define:ENABLE_WEBSOCKET_HOST
 /define:ENABLE_MONO
-/define:NET_4_6
+/define:NET_STANDARD_2_0
 /define:ENABLE_PROFILER
 /define:DEBUG
 /define:TRACE
@@ -289,20 +298,27 @@
 /define:UNITY_POST_PROCESSING_STACK_V2
 /define:CSHARP_7_OR_LATER
 /define:CSHARP_7_3_OR_NEWER
-D:\Users\ijona\Documents\GitHub\gofast\GoFast\Library\PackageCache\com.unity.collab-proxy@1.2.16\Editor\AssemblyInfo.cs
-D:\Users\ijona\Documents\GitHub\gofast\GoFast\Library\PackageCache\com.unity.collab-proxy@1.2.16\Editor\Collab\Bootstrap.cs
-D:\Users\ijona\Documents\GitHub\gofast\GoFast\Library\PackageCache\com.unity.collab-proxy@1.2.16\Editor\Collab\CollabAnalytics.cs
-D:\Users\ijona\Documents\GitHub\gofast\GoFast\Library\PackageCache\com.unity.collab-proxy@1.2.16\Editor\Collab\CollabHistoryWindow.cs
-D:\Users\ijona\Documents\GitHub\gofast\GoFast\Library\PackageCache\com.unity.collab-proxy@1.2.16\Editor\Collab\CollabToolbarButton.cs
-D:\Users\ijona\Documents\GitHub\gofast\GoFast\Library\PackageCache\com.unity.collab-proxy@1.2.16\Editor\Collab\CollabToolbarWindow.cs
-D:\Users\ijona\Documents\GitHub\gofast\GoFast\Library\PackageCache\com.unity.collab-proxy@1.2.16\Editor\Collab\Presenters\CollabHistoryPresenter.cs
-D:\Users\ijona\Documents\GitHub\gofast\GoFast\Library\PackageCache\com.unity.collab-proxy@1.2.16\Editor\Collab\Views\BuildStatusButton.cs
-D:\Users\ijona\Documents\GitHub\gofast\GoFast\Library\PackageCache\com.unity.collab-proxy@1.2.16\Editor\Collab\Views\CollabHistoryDropDown.cs
-D:\Users\ijona\Documents\GitHub\gofast\GoFast\Library\PackageCache\com.unity.collab-proxy@1.2.16\Editor\Collab\Views\CollabHistoryDropDownItem.cs
-D:\Users\ijona\Documents\GitHub\gofast\GoFast\Library\PackageCache\com.unity.collab-proxy@1.2.16\Editor\Collab\Views\CollabHistoryItem.cs
-D:\Users\ijona\Documents\GitHub\gofast\GoFast\Library\PackageCache\com.unity.collab-proxy@1.2.16\Editor\Collab\Views\CollabHistoryItemFactory.cs
-D:\Users\ijona\Documents\GitHub\gofast\GoFast\Library\PackageCache\com.unity.collab-proxy@1.2.16\Editor\Collab\Views\CollabHistoryRevisionLine.cs
-D:\Users\ijona\Documents\GitHub\gofast\GoFast\Library\PackageCache\com.unity.collab-proxy@1.2.16\Editor\Collab\Views\HistoryProgressSpinner.cs
-D:\Users\ijona\Documents\GitHub\gofast\GoFast\Library\PackageCache\com.unity.collab-proxy@1.2.16\Editor\Collab\Views\ICollabHistoryItemFactory.cs
-D:\Users\ijona\Documents\GitHub\gofast\GoFast\Library\PackageCache\com.unity.collab-proxy@1.2.16\Editor\Collab\Views\PagedListView.cs
-D:\Users\ijona\Documents\GitHub\gofast\GoFast\Library\PackageCache\com.unity.collab-proxy@1.2.16\Editor\Collab\Views\StatusView.cs
+Assets\Scripts\Experimental\clampLookAt.cs
+Assets\Scripts\Experimental\Interceptor.cs
+Assets\Scripts\Interaction\Button.cs
+Assets\Scripts\Interaction\ButtonObject.cs
+Assets\Scripts\Interaction\Dimension.cs
+Assets\Scripts\Interaction\DSwitchable.cs
+Assets\Scripts\Interaction\DSwitcher.cs
+Assets\Scripts\Interaction\Interactable.cs
+Assets\Scripts\Interaction\Interactor.cs
+Assets\Scripts\Level\BoostRing.cs
+Assets\Scripts\Level\myReset.cs
+Assets\Scripts\Level\Path.cs
+Assets\Scripts\Level\Point.cs
+Assets\Scripts\Level\SpecialPlatform.cs
+Assets\Scripts\Level\TileGenerator.cs
+Assets\Scripts\Player\CameraEffects.cs
+Assets\Scripts\Player\CameraEffectsMaster.cs
+Assets\Scripts\Player\Drone.cs
+Assets\Scripts\Player\Effect.cs
+Assets\Scripts\Player\FollowCamera.cs
+Assets\Scripts\Player\InputData.cs
+Assets\Scripts\Player\PlayerController.cs
+Assets\Scripts\Player\PlayerControllerRefactored.cs
+Assets\Scripts\Player\PlayerData.cs

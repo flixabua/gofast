@@ -80,6 +80,7 @@
     <Compile Include="Assets\Scripts\Player\CameraEffects.cs" />
     <Compile Include="Assets\Scripts\Player\CameraEffectsMaster.cs" />
     <Compile Include="Assets\Scripts\Player\Drone.cs" />
+    <Compile Include="Assets\Scripts\Player\Effect.cs" />
     <Compile Include="Assets\Scripts\Player\FollowCamera.cs" />
     <Compile Include="Assets\Scripts\Player\InputData.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
