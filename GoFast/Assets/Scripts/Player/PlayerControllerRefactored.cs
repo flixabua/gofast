@@ -502,16 +502,16 @@ public class PlayerControllerRefactored : myReset
         //LookAround
         if (!useController)
         {
-            deltaXRot = Input.GetAxisRaw(lookAxisHoriz) * mouseSpeed;
-            deltaYRot = -Input.GetAxisRaw(lookAxisVerti) * mouseSpeed;
+            deltaXRot = Input.GetAxisRaw(lookAxisHoriz) * mouseSpeed * Time.timeScale;
+            deltaYRot = -Input.GetAxisRaw(lookAxisVerti) * mouseSpeed * Time.timeScale;
 
             if (invertXAxis) deltaXRot = -deltaXRot;
             if (invertYAxis) deltaYRot = -deltaYRot;
         }
         else//TODO: rework controller input
         {
-            deltaXRot = Input.GetAxisRaw(controllerAxisHoriz) * mouseSpeed;
-            deltaYRot = Input.GetAxisRaw(controllerAxisVerti) * mouseSpeed;
+            deltaXRot = Input.GetAxisRaw(controllerAxisHoriz) * mouseSpeed * Time.timeScale;
+            deltaYRot = Input.GetAxisRaw(controllerAxisVerti) * mouseSpeed * Time.timeScale;
 
             //FIXME: camera rotates the wrong way when wallrunning and wallTurning
         }//use RotateAround to stay relative to player and not camera

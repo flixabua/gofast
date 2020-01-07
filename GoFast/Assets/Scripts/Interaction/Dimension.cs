@@ -15,4 +15,5 @@ public class Dimension : ScriptableObject
     public Material mat;
     public int index = 0;
     public UnityEngine.Rendering.PostProcessing.PostProcessProfile postProcessingVolume;
+    public Color fogColor = Color.blue;
 }

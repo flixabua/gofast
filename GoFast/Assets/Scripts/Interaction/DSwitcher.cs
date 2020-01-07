@@ -44,7 +44,10 @@ public class DSwitcher : MonoBehaviour
         dimensionVolumeIndex = new int[dimensions.Length];
         for (int i = 0; i < dimensionVolumeIndex.Length; i++)
         {
-            dimensionVolumeIndex[i] = CameraEffectsMaster.addVolume(dimensions[i].postProcessingVolume);
+            Effect effect = new Effect();
+            effect.ppProfile = dimensions[i].postProcessingVolume;
+            effect.fogColor = dimensions[i].fogColor;
+            dimensionVolumeIndex[i] = CameraEffectsMaster.addEffect(effect);
         }
 
         switchDimension(0);

@@ -16,3 +16,4 @@ MonoBehaviour:
   index: 1
   postProcessingVolume: {fileID: 11400000, guid: 0cef1c5f389178040a9eba8d3ed3b118,
     type: 2}
+  fogColor: {r: 0.5647059, g: 0.27450982, b: 0.28019294, a: 1}

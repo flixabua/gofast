@@ -14,10 +14,10 @@ using UnityEngine.Rendering.PostProcessing;
 public class CameraEffectsMaster : MonoBehaviour
 {
     public static CameraEffectsMaster instance;
-    public static CameraEffects[] effects = new CameraEffects[0];
+    public static CameraEffects[] cameraEffects = new CameraEffects[0];
     public AnimationCurve fovPunchCurve = new AnimationCurve();
 
-    private List<PostProcessVolume> ppVolumes = new List<PostProcessVolume>();
+    private List<Effect> effects = new List<Effect>();
 
 
     void Awake()//gets called before start -> there is an instacne for all the other stuff to register to
@@ -32,18 +32,20 @@ public class CameraEffectsMaster : MonoBehaviour
         else Debug.LogWarning("Attempted fov punch, but there was no instance of the master");
     }
 
-    public static int addVolume(PostProcessProfile profile)
+    public static int addEffect(Effect effect)
     {
         if (instance != null)
         {
             PostProcessVolume volume = instance.gameObject.AddComponent<PostProcessVolume>();
-            volume.profile = profile;
+            volume.profile = effect.ppProfile;
             volume.isGlobal = true;
             volume.priority = 1;
             volume.weight = 0;
 
-            instance.ppVolumes.Add(volume);
-            return instance.ppVolumes.Count - 1;
+            effect.ppVolume = volume;
+
+            instance.effects.Add(effect);
+            return instance.effects.Count - 1;
         }
         else
         {
@@ -52,15 +54,16 @@ public class CameraEffectsMaster : MonoBehaviour
         }
     }
 
-    public static void setVolumeweight(int index, float weigt)//WHY DO THEY NOT AFFECT THE SCENE ?????? AHHHH
+    public static void setVolumeweight(int index, float weight)//WHY DO THEY NOT AFFECT THE SCENE ?????? AHHHH
     {
         if (instance != null)
         {
-            if (index >= 0 && index < instance.ppVolumes.Count)
+            if (index >= 0 && index < instance.effects.Count)
             {
-                instance.ppVolumes[index].weight = weigt;
+                instance.effects[index].ppVolume.weight = weight;
+                if(weight >= 0.5f) RenderSettings.fogColor = instance.effects[index].fogColor;
             }
-            else Debug.LogWarning("Attempted to set volume weight, but the index was out of bounds: " + index + ", max allowed: " + instance.ppVolumes.Count);
+            else Debug.LogWarning("Attempted to set volume weight, but the index was out of bounds: " + index + ", max allowed: " + instance.effects.Count);
         }
         else Debug.LogWarning("Attempted to set volume weight, but there was no instance of the master");
     }
@@ -85,9 +88,9 @@ public class CameraEffectsMaster : MonoBehaviour
     */
     public void applyFovPunch(float strength, float duration)
     {
-        for (int i = 0; i < effects.Length; i++)
+        for (int i = 0; i < cameraEffects.Length; i++)
         {
-            effects[i].StartCoroutine(effects[i].fovPunch(strength, duration, fovPunchCurve));
+            cameraEffects[i].StartCoroutine(cameraEffects[i].fovPunch(strength, duration, fovPunchCurve));
         }
     }
 
@@ -101,7 +104,7 @@ public class CameraEffectsMaster : MonoBehaviour
         if (instance == null) instance = this;
         else Destroy(this);
 
-        effects = GameObject.FindObjectsOfType<CameraEffects>();
+        cameraEffects = GameObject.FindObjectsOfType<CameraEffects>();
 
        
         if (this == instance)
