@@ -62,6 +62,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Backend\GameStateManager.cs" />
     <Compile Include="Assets\Scripts\Experimental\clampLookAt.cs" />
     <Compile Include="Assets\Scripts\Experimental\Interceptor.cs" />
     <Compile Include="Assets\Scripts\Interaction\Button.cs" />

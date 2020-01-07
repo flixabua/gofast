@@ -21,7 +21,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 4}
-  m_MinSize: {x: 950, y: 616}
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -97,7 +97,7 @@ MonoBehaviour:
     y: 0
     width: 1920
     height: 997
-  m_MinSize: {x: 950, y: 616}
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &5
 MonoBehaviour:
@@ -413,9 +413,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 863f0000
-      m_LastClickedID: 16262
-      m_ExpandedIDs: c4f9ffff703f0000743f0000803f00008c3f0000983f0000a43f0000
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 4acbffffa6cbffff46ebffff4eebffff66f0ffff8ef2ffffeaf2ffff6afbffff24540000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -475,7 +475,7 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 201.99998, y: 126.09999, z: 0}
+    m_Target: {x: 130.35449, y: 193.59697, z: -4.037567}
     speed: 2
     m_Value: {x: 130.35449, y: 193.59697, z: -4.037567}
   m_RenderMode: 0
@@ -488,7 +488,7 @@ MonoBehaviour:
   m_SceneViewState:
     showFog: 1
     showMaterialUpdate: 0
-    showSkybox: 0
+    showSkybox: 1
     showFlares: 1
     showImageEffects: 1
     showParticleSystems: 1
@@ -510,9 +510,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: -0.011999713, y: 0, z: 0, w: 0.99992806}
   m_Size:
-    m_Target: 412.45126
+    m_Target: 650.9856
     speed: 2
-    m_Value: 337.74408
+    m_Value: 650.9856
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -701,19 +701,19 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefabs/UI
+    - Assets/Scripts/Interaction
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Prefabs/UI
+  - Assets/Scripts/Interaction
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\user\Documents\GitHub\gofast\GoFast
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: f63a0000
-    m_LastClickedID: 15094
+    m_SelectedIDs: c0370000
+    m_LastClickedID: 14272
     m_ExpandedIDs: 000000007033000012340000fa380000fc390000fa3e000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
