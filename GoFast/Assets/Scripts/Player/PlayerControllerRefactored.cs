@@ -23,7 +23,7 @@ public class PlayerControllerRefactored : myReset
 
     //Input
     private Camera camera;
-    /*[SerializeField]*/ private float mouseSpeed = 1f;
+    /*[SerializeField]*/ public float mouseSpeed = 1f;//public so pause menu can access
     private float deltaXRot;
     private float deltaYRot;
     private float horiz;
@@ -611,7 +611,7 @@ public class PlayerControllerRefactored : myReset
         wallTurnVerticalForce = playerData.wallTurnVerticalForce;
         wallTurnNormalForce = playerData.wallTurnNormalForce;
         wallTurnMinVerticalSpeed = playerData.wallTurnMinVerticalSpeed;
-        turnSpeed = turnSpeed;
+        turnSpeed = playerData.turnSpeed;
 
 
         //pullUp
