@@ -76,6 +76,6 @@ public class DieWhenDone : MonoBehaviour
 
     private void OnBecameInvisible()
     {
-        if (myType == type.sight) Destroy(gameObject); 
+        if (myType == type.sight || myType == type.speedAndTimeAndSight) Destroy(gameObject); 
     }
 }

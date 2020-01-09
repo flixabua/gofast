@@ -6,6 +6,10 @@
  * 
  * uses interceptor and clamplookat
  * 
+ * 
+ * also ugly and hard to read code. oof
+ * 
+ * //TODO: comments ffs
  */ 
 
 using System.Collections;
