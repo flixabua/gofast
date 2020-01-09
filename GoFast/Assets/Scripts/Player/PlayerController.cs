@@ -62,7 +62,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float groundedMargin = 0.15f;
     private float timeSinceGrounded = 0f;
 
-    private Camera camera;
+    private new Camera camera;
     private float horiz;
     private float vert;
     [SerializeField] private bool useController = false;

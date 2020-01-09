@@ -93,11 +93,12 @@ public class CameraEffectsMaster : MonoBehaviour
             cameraEffects[i].StartCoroutine(cameraEffects[i].fovPunch(strength, duration, fovPunchCurve));
         }
     }
-
+    /*
     private void OnLevelWasLoaded(int level)
     {
         reload();
     }
+    */
 
     public void reload()
     {

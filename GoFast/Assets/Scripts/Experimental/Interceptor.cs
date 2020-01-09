@@ -34,7 +34,18 @@ public static class Intersection
    {
        Vector3 result = new Vector3();
 
-       //find out it if object1 is in ranges
+        //if the target is not moving, dont calculate all that shit
+        if (vel1.magnitude < 0.001)//velocity isnt usually truely 0 because floats and physics are weird
+        {
+            Vector3 delta = pos1 - pos2;
+
+            result = delta.normalized * speed2;
+
+            return result;
+        }
+        
+
+       //find out it if object1 is in range
        bool inRange = false;
        float timeStamp = -1;
        for (float t = 0; t < timeFrame; t += timeStep)
