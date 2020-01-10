@@ -65,6 +65,8 @@
     <Compile Include="Assets\Scripts\Backend\GameStateManager.cs" />
     <Compile Include="Assets\Scripts\Experimental\clampLookAt.cs" />
     <Compile Include="Assets\Scripts\Experimental\Interceptor.cs" />
+    <Compile Include="Assets\Scripts\Experimental\MusicManager.cs" />
+    <Compile Include="Assets\Scripts\Experimental\SoundMenuTranslaotr.cs" />
     <Compile Include="Assets\Scripts\Interaction\Button.cs" />
     <Compile Include="Assets\Scripts\Interaction\ButtonObject.cs" />
     <Compile Include="Assets\Scripts\Interaction\Dimension.cs" />
@@ -73,11 +75,13 @@
     <Compile Include="Assets\Scripts\Interaction\Interactable.cs" />
     <Compile Include="Assets\Scripts\Interaction\Interactor.cs" />
     <Compile Include="Assets\Scripts\Level\BoostRing.cs" />
+    <Compile Include="Assets\Scripts\Level\DieWhenDone.cs" />
     <Compile Include="Assets\Scripts\Level\myReset.cs" />
     <Compile Include="Assets\Scripts\Level\Path.cs" />
     <Compile Include="Assets\Scripts\Level\Point.cs" />
     <Compile Include="Assets\Scripts\Level\SpecialPlatform.cs" />
     <Compile Include="Assets\Scripts\Level\TileGenerator.cs" />
+    <Compile Include="Assets\Scripts\Level\Turret.cs" />
     <Compile Include="Assets\Scripts\Player\CameraEffects.cs" />
     <Compile Include="Assets\Scripts\Player\CameraEffectsMaster.cs" />
     <Compile Include="Assets\Scripts\Player\Drone.cs" />
