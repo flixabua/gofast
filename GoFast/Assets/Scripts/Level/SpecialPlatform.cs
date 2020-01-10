@@ -87,9 +87,10 @@ public class SpecialPlatform : ButtonObject
 
             case type.circle://circle around center point
                 //set pos according to standart algebra circle stuff
-                float x = Mathf.Cos(Time.time * moveSpeed * Time.timeScale / 6) * radius + center.x;
-                float z = Mathf.Sin(Time.time * moveSpeed * Time.timeScale / 6) * radius + center.z;
-                transform.position = new Vector3(x, center.y, z);
+                float x = Mathf.Cos(Time.time * moveSpeed / 6) * radius + center.x;
+                float z = Mathf.Sin(Time.time * moveSpeed / 6) * radius + center.z;
+                Vector3 newPos = new Vector3(x, center.y, z);
+                transform.position = Vector3.Lerp(transform.position, newPos, Time.timeScale);
                 break;
 
             case type.rotate://rotate along own axis
