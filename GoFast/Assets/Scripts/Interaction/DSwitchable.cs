@@ -20,7 +20,7 @@ public class DSwitchable : MonoBehaviour
 
     private Renderer[] render = new Renderer[0];
 
-    private void Start()
+    private void Awake()//Initiallize before intial switch
     {
 
         if (render.Length == 0) render = GetComponentsInChildren<Renderer>();
@@ -46,7 +46,7 @@ public class DSwitchable : MonoBehaviour
 
         dimension = DSwitcher.register(this);
         if (dimension == null) Debug.LogWarning(name + " failed to register to " + dimensionIndex);
-        else Debug.Log(name + " registered to dimension " + dimension.index + " (expected " + dimensionIndex + ")");
+        else Debug.Log(name + " registered to dimension " + dimension.index);
     }
 
     public void switchTo(int dim)

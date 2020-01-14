@@ -20,7 +20,7 @@ public class DSwitcher : MonoBehaviour
 
     private List<DSwitchable> switchables = new List<DSwitchable>();
     public  Dimension[] dimensions = new Dimension[0];//TODO: make sure they are in the right places
-    public int[] dimensionVolumeIndex = new int[0];
+    [HideInInspector] public int[] dimensionVolumeIndex = new int[0];
     int currentDimension = 0;
 
     public string button = "Switch";
@@ -71,13 +71,13 @@ public class DSwitcher : MonoBehaviour
         }
     }
 
-    public void switchDimension(int dimension)//TODO: enable / disable certain dimensions without affecting the others
+    public void switchDimension(int dimension)
     {
         //Debug.Log("Switching to " + dimension);
 
         CameraEffectsMaster.fovPunch(5, 0.25f);
-        //CameraEffectsMaster.changeColor(dimensions[dimension].viewTint);
-        for (int i = 0; i < dimensions.Length; i++)//TODO: save the indices individually, because they will not be indentical!
+
+        for (int i = 0; i < dimensions.Length; i++)
         {
             if (i == dimension) CameraEffectsMaster.setVolumeweight(dimensionVolumeIndex[i], 1);
             else CameraEffectsMaster.setVolumeweight(dimensionVolumeIndex[i], 0);
