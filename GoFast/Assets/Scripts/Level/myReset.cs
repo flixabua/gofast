@@ -51,7 +51,7 @@ public class myReset : MonoBehaviour
        setValues();
    }
 
-   public void ResetMe()//set values to reset values
+   public virtual void ResetMe()//set values to reset values
    {
         //me
        transform.position = myResetPos;
