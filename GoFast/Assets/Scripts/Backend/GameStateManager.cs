@@ -1,4 +1,10 @@
-﻿using System.Collections;
+﻿/*
+ * written by Felix Völk
+ * 
+ * Used to save highscores and get them
+ * 
+ */
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,8 +17,9 @@ public class GameStateManager : MonoBehaviour
         highscore = PlayerPrefs.GetInt("Score", 0);
     }
 
-    void updateHighscore(int score)
+    public static void updateHighscore(int score)
     {
         PlayerPrefs.SetInt("Score", score);
+        Debug.Log(PlayerPrefs.GetInt("Score"));
     }
 }

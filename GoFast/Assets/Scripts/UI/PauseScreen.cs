@@ -3,9 +3,10 @@
  * 
  * Script for UI in the playing game, changes Timescale, displays a HUD when slowed and provides a slider
  * 
- * -> needs mouse sensibility change somewhere
  */
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PauseScreen : MonoBehaviour
 {
@@ -43,5 +44,15 @@ public class PauseScreen : MonoBehaviour
         //Add mouse sensibility change here
         // float mousesensibility = newValue;
         GameObject.FindObjectOfType<PlayerControllerRefactored>().mouseSpeed = newValue;
+    }
+
+    public void LoadLevelByIndex(int levelIndex)
+    {
+        SceneManager.LoadScene(levelIndex);
+    }
+
+    public void LoadLevelByName(string levelName)
+    {
+        SceneManager.LoadScene(levelName);
     }
 }
