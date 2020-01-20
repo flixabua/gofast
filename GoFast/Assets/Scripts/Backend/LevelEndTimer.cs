@@ -56,7 +56,7 @@ public class LevelEndTimer : myReset
 
         maxDistance = Vector3.Distance(player.transform.position, transform.position);
         //TODO: get record!!!
-        record = GameStateManager.getHighscore();
+        record = GameStateManager.getHighscore(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void startTimer()
@@ -70,7 +70,7 @@ public class LevelEndTimer : myReset
         timing = false;
         if (time < record || record == 0f)
         {
-            GameStateManager.updateHighscore(time);
+            GameStateManager.updateHighscore(SceneManager.GetActiveScene().buildIndex, time);
             text.color = Color.white;
         }
     }

@@ -19,14 +19,20 @@ public class MainMenuManager : MonoBehaviour
     private void Start()
     {
         playerStats = GameObject.Find("Highscore").GetComponent<Text>();
-        if (GameStateManager.getHighscore() == 0f && button2 != null && button3 != null)
+        if (GameStateManager.getHighscore(1) == 0f || GameStateManager.getHighscore(1) >= 120f)
         {
             button2.interactable = false;
-            button3.interactable = false;
         }
         else
         {
             button2.interactable = true;
+        }
+        if (GameStateManager.getHighscore(2) == 0f || GameStateManager.getHighscore(2) >= 120f)
+        {
+            button3.interactable = false;
+        }
+        else
+        {
             button3.interactable = true;
         }
         UpdateStats();
@@ -50,6 +56,11 @@ public class MainMenuManager : MonoBehaviour
 
     public void UpdateStats()
     {
-        playerStats.text = "Highscore:\n" + PlayerPrefs.GetFloat("Score").ToString();
+        
+        playerStats.text = "Highscores:\n" + 
+            "Level 1: " + PlayerPrefs.GetFloat("Score_1").ToString("F2") + "\n" +
+            "Level 2: " + PlayerPrefs.GetFloat("Score_2").ToString("F2") + "\n" +
+            "Level 3: " + PlayerPrefs.GetFloat("Score_3").ToString("F2") + "\n";
     }
+
 }
