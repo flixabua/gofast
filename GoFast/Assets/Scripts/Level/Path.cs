@@ -1,5 +1,4 @@
-﻿
-/*
+﻿/*
 * written by Jonas Hack
 * 
 * stores a list of positions
