@@ -45,6 +45,6 @@ public class MainMenuManager : MonoBehaviour
 
     public void UpdateStats()
     {
-        playerStats.text = "Highscore:\n" + PlayerPrefs.GetInt("Score").ToString();
+        playerStats.text = "Highscore:\n" + PlayerPrefs.GetFloat("Score").ToString();
     }
 }

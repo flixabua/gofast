@@ -25,6 +25,7 @@ public class PauseScreen : MonoBehaviour
     {
         if (Input.GetButtonDown("Cancel"))
         {
+            GameStateManager.updateHighscore(10f);
             if (!paused) {
                 Time.timeScale = timepause;
                 canvas.SetActive(true);

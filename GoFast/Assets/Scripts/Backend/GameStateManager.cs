@@ -11,15 +11,19 @@ using UnityEngine;
 public class GameStateManager : MonoBehaviour
 {
     // Start is called before the first frame update
-    int highscore;
+    float highscore;
     void Start()
     {
-        highscore = PlayerPrefs.GetInt("Score", 0);
+        highscore = PlayerPrefs.GetFloat("Score", 0f);
     }
 
-    public static void updateHighscore(int score)
+    public static void updateHighscore(float score)
     {
-        PlayerPrefs.SetInt("Score", score);
+        PlayerPrefs.SetFloat("Score", score);
         Debug.Log(PlayerPrefs.GetInt("Score"));
+    }
+
+    public static float getHighscore() {
+        return PlayerPrefs.GetFloat("Score");
     }
 }
