@@ -68,7 +68,7 @@ public class LevelEndTimer : myReset
     public void endTimer()
     {
         timing = false;
-        if (time < record)
+        if (time < record || record == 0f)
         {
             GameStateManager.updateHighscore(time);
             text.color = Color.white;
@@ -125,7 +125,7 @@ public class LevelEndTimer : myReset
     public IEnumerator restart(bool delay)
     {
         Time.timeScale = 0.0001f;
-        endTimer();
+        timing = false;
         if (delay) yield return new WaitForSecondsRealtime(restartTime);
 
         //reset everything;
@@ -144,6 +144,7 @@ public class LevelEndTimer : myReset
     public IEnumerator nextLevel(bool delay)
     {
         Time.timeScale = 0.001f;
+        endTimer();
         if (delay) yield return new WaitForSecondsRealtime(restartTime);
         Time.timeScale = 1.0f;
         int level = SceneManager.GetActiveScene().buildIndex;
@@ -151,6 +152,7 @@ public class LevelEndTimer : myReset
         level++;
         if (level >= SceneManager.sceneCountInBuildSettings) level = 0;
         Debug.Log(level);
+        
         SceneManager.LoadScene(level);
         yield return null;
     }

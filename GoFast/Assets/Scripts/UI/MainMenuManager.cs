@@ -19,10 +19,15 @@ public class MainMenuManager : MonoBehaviour
     private void Start()
     {
         playerStats = GameObject.Find("Highscore").GetComponent<Text>();
-        if (PlayerPrefs.GetInt("Score", 0) == 0 && button2 != null && button3 != null)
+        if (GameStateManager.getHighscore() == 0f && button2 != null && button3 != null)
         {
             button2.interactable = false;
             button3.interactable = false;
+        }
+        else
+        {
+            button2.interactable = true;
+            button3.interactable = true;
         }
         UpdateStats();
     }
