@@ -25,19 +25,24 @@ public class PauseScreen : MonoBehaviour
     {
         if (Input.GetButtonDown("Cancel"))
         {
-            GameStateManager.updateHighscore(10f);
-            if (!paused) {
+            Pause();
+        }
+    }
+
+    public void Pause()
+    {  
+            if (!paused)
+            {
                 Time.timeScale = timepause;
                 canvas.SetActive(true);
                 paused = true;
-        } else
+            }
+            else
             {
                 Time.timeScale = 1f;
                 canvas.SetActive(false);
                 paused = false;
             }
-        }
-
     }
 
     public void changeSlider(float newValue)
