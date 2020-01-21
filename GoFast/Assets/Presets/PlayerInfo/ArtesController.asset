@@ -12,29 +12,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15068d6414080da4c907705f06bfbe15, type: 3}
   m_Name: ArtesController
   m_EditorClassIdentifier: 
-  maxSpeed: 15
-  maxAccelarationSpeed: 15
+  maxSpeed: 100
+  maxAccelarationSpeed: 10
   accelarationForce: 60
-  myDrag: 0.67
-  jumpForce: 350
+  myDrag: 0.8
+  jumpForce: 400
   aerialMultiplier: 0.15
   jumpCooldown: 0.15
   groundedMargin: 0.15
-  wallRunVertivalDrag: 0.511
-  wallMultiplier: 1
+  wallRunVertivalDrag: 0.82
+  wallMultiplier: 0.6
   wallRunCameraTilt: 10
   wallRunCameraTiltSpeed: 0.15
-  wallRunWallAttraction: 1
+  wallRunWallAttraction: 0.5
   wallRunDetectionDistance: 1.55
-  wallMinVelocity: 4
-  wallRunJumpNormalForce: 5000
-  wallRunJumpTangentForce: 0
-  wallRunJumpForwardForce: 6000
-  wallRunJumpVerticalForce: 0
+  wallMinVelocity: 2
+  wallRunJumpNormalForce: 500
+  wallRunJumpTangentForce: 200
+  wallRunJumpForwardForce: 25
+  wallRunJumpVerticalForce: 350
   wallTurnDetectionDistance: 2
   wallTurnVerticalForce: 500
-  wallTurnNormalForce: 300
+  wallTurnNormalForce: 250
   wallTurnMinVerticalSpeed: -5
   turnSpeed: 500
-  pullUpVercticalForce: 500
+  pullUpVercticalForce: 250
   pullUpForwardForce: 50
